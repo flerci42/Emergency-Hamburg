@@ -30,7 +30,7 @@ local Window = ArrayField:CreateWindow({
 })
 
 --// Random Stuff
-local Sense = loadstring(game:HttpGet('https://raw.githubusercontent.com/flerci42/ESP/main/.lua'))()
+local ESP = loadstring(game:HttpGet('https://raw.githubusercontent.com/flerci42/ESP/main/.lua'))()
 local player = game.Players.LocalPlayer
 local minHealth
 local choosenWeapon
@@ -406,8 +406,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.enabled = Value
-        Sense.teamSettings.friendly.enabled = Value
+        ESP.teamSettings.enemy.enabled = Value
+        ESP.teamSettings.friendly.enabled = Value
     end,
 })
 
@@ -417,10 +417,10 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.box = Value
-        Sense.teamSettings.friendly.box = Value
-        Sense.teamSettings.enemy.boxColor = { "Team Color", 1 }
-        Sense.teamSettings.friendly.boxColor = { "Team Color", 1 }
+        ESP.teamSettings.enemy.box = Value
+        ESP.teamSettings.friendly.box = Value
+        ESP.teamSettings.enemy.boxColor = { "Team Color", 1 }
+        ESP.teamSettings.friendly.boxColor = { "Team Color", 1 }
     end,
 })
 
@@ -430,10 +430,10 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.box3d = Value
-        Sense.teamSettings.friendly.box3d = Value
-        Sense.teamSettings.enemy.box3dColor = { "Team Color", 1 }
-        Sense.teamSettings.friendly.box3dColor = { "Team Color", 1 }
+        ESP.teamSettings.enemy.box3d = Value
+        ESP.teamSettings.friendly.box3d = Value
+        ESP.teamSettings.enemy.box3dColor = { "Team Color", 1 }
+        ESP.teamSettings.friendly.box3dColor = { "Team Color", 1 }
     end,
 })
 
@@ -443,8 +443,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.healthBar = Value
-        Sense.teamSettings.friendly.healthBar = Value
+        ESP.teamSettings.enemy.healthBar = Value
+        ESP.teamSettings.friendly.healthBar = Value
     end,
 })
 
@@ -454,8 +454,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.healthText = Value
-        Sense.teamSettings.friendly.healthText = Value
+        ESP.teamSettings.enemy.healthText = Value
+        ESP.teamSettings.friendly.healthText = Value
     end,
 })
 
@@ -465,8 +465,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.name = Value
-        Sense.teamSettings.friendly.name = Value
+        ESP.teamSettings.enemy.name = Value
+        ESP.teamSettings.friendly.name = Value
     end,
 })
 
@@ -476,8 +476,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.weapon = Value
-        Sense.teamSettings.friendly.weapon = Value
+        ESP.teamSettings.enemy.weapon = Value
+        ESP.teamSettings.friendly.weapon = Value
     end,
 })
 
@@ -487,8 +487,8 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.distance = Value
-        Sense.teamSettings.friendly.distance = Value
+        ESP.teamSettings.enemy.distance = Value
+        ESP.teamSettings.friendly.distance = Value
     end,
 })
 
@@ -498,10 +498,10 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.tracer = Value
-        Sense.teamSettings.friendly.tracer = Value
-        Sense.teamSettings.enemy.tracerColor = { "Team Color", 1 }
-        Sense.teamSettings.friendly.tracerColor = { "Team Color", 1 }
+        ESP.teamSettings.enemy.tracer = Value
+        ESP.teamSettings.friendly.tracer = Value
+        ESP.teamSettings.enemy.tracerColor = { "Team Color", 1 }
+        ESP.teamSettings.friendly.tracerColor = { "Team Color", 1 }
     end,
 })
 
@@ -511,12 +511,12 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = PlayerVisualsSection,
     Callback = function(Value)
-        Sense.teamSettings.enemy.chams = Value
-        Sense.teamSettings.friendly.chams = Value
-        Sense.teamSettings.enemy.chamsFillColor  = { "Team Color", 0.5 }
-        Sense.teamSettings.friendly.chamsFillColor = { "Team Color", 0.5 }
-        Sense.teamSettings.enemy.chamsOutlineColor = { "Team Color", 0 }
-        Sense.teamSettings.friendly.chamsOutlineColor = { "Team Color", 0 }
+        ESP.teamSettings.enemy.chams = Value
+        ESP.teamSettings.friendly.chams = Value
+        ESP.teamSettings.enemy.chamsFillColor  = { "Team Color", 0.5 }
+        ESP.teamSettings.friendly.chamsFillColor = { "Team Color", 0.5 }
+        ESP.teamSettings.enemy.chamsOutlineColor = { "Team Color", 0 }
+        ESP.teamSettings.friendly.chamsOutlineColor = { "Team Color", 0 }
     end,
 })
 
@@ -528,7 +528,7 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = BuildingVisualsSection,
     Callback = function(Value)
-        local object = Sense.AddInstance(game:GetService("Workspace").Buildings.Bank.BankLocator, {
+        local object = ESP.AddInstance(game:GetService("Workspace").Buildings.Bank.BankLocator, {
             text = "Bank",
             textColor = { Color3.new(1,1,1), 1 },
             textOutline = true,
@@ -548,7 +548,7 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = BuildingVisualsSection,
     Callback = function(Value)
-        local object = Sense.AddInstance(game:GetService("Workspace").Buildings.Jeweler.JewelryLocator, {
+        local object = ESP.AddInstance(game:GetService("Workspace").Buildings.Jeweler.JewelryLocator, {
             text = "Jewelry",
             textColor = { Color3.new(1,1,1), 1 },
             textOutline = true,
@@ -568,7 +568,7 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = BuildingVisualsSection,
     Callback = function(Value)
-        local object = Sense.AddInstance(game:GetService("Workspace").Buildings["GasStation-Ares"].gasStationLocator, {
+        local object = ESP.AddInstance(game:GetService("Workspace").Buildings["GasStation-Ares"].gasStationLocator, {
             text = "Gas Station",
             textColor = { Color3.new(1,1,1), 1 },
             textOutline = true,
@@ -578,7 +578,7 @@ local Toggle = VisualsTab:CreateToggle({
             limitDistance = false,
             maxDistance = 150
         })
-        local object2 = Sense.AddInstance(game:GetService("Workspace").Buildings["GasStation-GasNGo"].gasStationLocator, {
+        local object2 = ESP.AddInstance(game:GetService("Workspace").Buildings["GasStation-GasNGo"].gasStationLocator, {
             text = "Gas Station",
             textColor = { Color3.new(1,1,1), 1 },
             textOutline = true,
@@ -599,7 +599,7 @@ local Toggle = VisualsTab:CreateToggle({
     Flag = "Toggle1",
     SectionParent = BuildingVisualsSection,
     Callback = function(Value)
-        local object = Sense.AddInstance(game:GetService("Workspace").Buildings.ToolShop.toolShopLocator, {
+        local object = ESP.AddInstance(game:GetService("Workspace").Buildings.ToolShop.toolShopLocator, {
             text = "Tool Shop",
             textColor = { Color3.new(1,1,1), 1 },
             textOutline = true,
@@ -613,7 +613,7 @@ local Toggle = VisualsTab:CreateToggle({
     end,
 })
 
-Sense.Load()
+ESP.Load()
 
 -- // Settings Tab
 
